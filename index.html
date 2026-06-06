@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonoCart // Checkout Matrix</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="checkout-container">
+        <!-- Left Structural Column: Form Inputs Layout -->
+        <main class="form-sheet">
+            <span class="step-indicator">Step 01 / 02</span>
+            <h2>Shipping Parameters</h2>
+            
+            <form id="checkout-form" class="minimal-form">
+                <div class="input-row">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="John Doe" required autocomplete="off">
+                </div>
+                <div class="input-row">
+                    <label>Destination Address</label>
+                    <input type="text" placeholder="123 Minimalist Way" required autocomplete="off">
+                </div>
+                <button type="submit" class="submit-btn">Continue to Payment</button>
+            </form>
+        </main>
+
+        <!-- Right Structural Column: Order Summary Calculations -->
+        <aside class="summary-sheet">
+            <h3 class="sheet-title">Order Ledger</h3>
+            
+            <div class="cart-items-holder">
+                <div class="cart-item">
+                    <div class="item-meta">
+                        <span class="item-name">Studio Desk Mat // XL</span>
+                        <span class="item-desc">Matte Obsidian Finish</span>
+                    </div>
+                    <span class="item-price">$49.00</span>
+                </div>
+            </div>
+
+            <div class="pricing-breakdown">
+                <div class="price-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal-val">$49.00</span>
+                </div>
+                <div class="price-row code-applied" id="discount-row">
+                    <span>Promo Discount [ MINIMAL ]</span>
+                    <span id="discount-val">-$10.00</span>
+                </div>
+                <div class="price-row total-row">
+                    <span>Total Amount</span>
+                    <span id="total-val">$39.00</span>
+                </div>
+            </div>
+            
+            <!-- Dynamic Micro-interaction Toggle -->
+            <button id="toggle-promo" class="promo-trigger">Remove Promo Code</button>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
